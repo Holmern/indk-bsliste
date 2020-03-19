@@ -1,7 +1,7 @@
-package Service;
+package com.sk.indkobsliste.Service;
 
-import Model.Product;
-import Repository.ProductRepo;
+import com.sk.indkobsliste.Model.Product;
+import com.sk.indkobsliste.Repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,10 +16,15 @@ public class ProductService {
 
     public List<Product> readAll(){
         List<Product> products = new ArrayList<>();
-        //Tilføj elementer fra products(repo) listen til products(Service) listen.
+        //Tilføj elementer fra products(repo) listen til products(com.sk.indk.bsliste.Service) listen.
         for (Product product : productRepo.readAll()) {
             products.add(product);
         }
         return products;
+    }
+    public void create(Product product){
+
+        productRepo.create(product);
+
     }
 }

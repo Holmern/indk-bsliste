@@ -1,4 +1,4 @@
-package Model;
+package com.sk.indkobsliste.Model;
 
 public class Product {
 

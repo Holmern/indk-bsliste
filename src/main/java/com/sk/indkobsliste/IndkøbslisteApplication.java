@@ -1,4 +1,4 @@
-package com.sk.indk.bsliste;
+package com.sk.indkobsliste;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,6 +1,6 @@
-package Repository;
+package com.sk.indkobsliste.Repository;
 
-import Model.Product;
+import com.sk.indkobsliste.Model.Product;
 import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public class ProductRepo {
 
-    private List<Product>products = new ArrayList<>();
+    private List<Product> products = new ArrayList<>();
 
     public ProductRepo(){
         this.products.add(new Product(1, "Æble", 5, "Pink Lady"));
@@ -19,5 +19,11 @@ public class ProductRepo {
 
     public List<Product> readAll(){
         return products;
+    }
+
+    public void create(Product product) {
+       products.add(new Product(product.getId(), product.getName(),product.getPrice(), product.getDescription()));
+
+
     }
 }
