@@ -12,18 +12,31 @@ import java.util.List;
 @Service
 public class ProductService {
 
+    private List<Product> products;
+
     @Autowired
     ProductRepo productRepo;
 
     public List<Product> readAll(){
-        List<Product> products = new ArrayList<>();
+        products = new ArrayList<>();
         //Tilføj elementer fra products(repo) listen til products(com.sk.indk.bsliste.Service) listen.
         for (Product product : productRepo.readAll()) {
             products.add(product);
         }
         return products;
     }
-    public void create(Product product){
+    public Product read(long id) {
+        int i = 0;
+        while (i < products.size()) {
+            if (products.get(i).getId() == id) return products.get(i);
+        i++;
+        }
+        return null;
+    }
+
+
+
+            public void create(Product product){
 
         productRepo.create(product);
     }
@@ -31,4 +44,9 @@ public class ProductService {
 
         productRepo.delete(id);
     }
+   public boolean update(Product product){
+        boolean updateOK = productRepo.update(product);
+        return updateOK;
+    }
+
 }

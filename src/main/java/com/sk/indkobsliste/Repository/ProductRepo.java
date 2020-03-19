@@ -26,8 +26,17 @@ public class ProductRepo {
     }
 
     public void delete(Long id) {
-        products.remove(new Product(id));
+        products.removeIf(i -> i.getId() == id);
     }
 
+    public boolean update (Product product){
+        for (int i = 0;  i<products.size(); i++){
+            if (products.get(i).getId()==product.getId()){
+                products.set(i,product);
 
+                return true;
+            }
+        }
+        return false;
+    }
 }

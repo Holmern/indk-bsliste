@@ -13,9 +13,6 @@ public class Product {
         this.price = price;
         this.description = description;
     }
-    public Product(long id){
-        this.id = id;
-    }
 
     public long getId() {
         return id;

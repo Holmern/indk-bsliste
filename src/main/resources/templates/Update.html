@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Update</title>
+</head>
+<body>
+<h1>Opdater produkt</h1>
+<form action="/Update" method="post">
+    <input type="text" name="id" placeholder="Id" th:value="${productList.id}">
+    <input type="text" name="name" placeholder="Navn" th:value="${productList.name}" >
+    <input type="text" name="price"  placeholder="Pris" th:value="${productList.price}">
+    <input type="text" name="description"  placeholder="Beskrivelse af produkt" th:value="${productList.description}">
+    <input type="submit" value="Updater">
+</form>
+
+</body>
+</html>
