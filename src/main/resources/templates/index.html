@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Indkøbsliste</title>
+</head>
+<body>
+<h1>Oversigt over produkter</h1>
+
+<table>
+
+        <tr>
+            <th>ID</th>
+            <th>Navn</th>
+            <th>PRIS</th>
+            <th>BESKRIVELSE</th>
+        </tr>
+
+        <tr th:each="product:${productList}">
+
+            <td th:text="${product.id}"></td>
+            <td th:text="${product.name}"></td>
+            <td th:text="${product.price}"></td>
+            <td th:text="${product.description}"></td>
+
+        </tr>
+
+</table>
+
+</body>
+</html>
