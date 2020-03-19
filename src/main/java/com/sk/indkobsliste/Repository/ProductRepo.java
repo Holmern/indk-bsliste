@@ -23,7 +23,11 @@ public class ProductRepo {
 
     public void create(Product product) {
        products.add(new Product(product.getId(), product.getName(),product.getPrice(), product.getDescription()));
-
-
     }
+
+    public void delete(Long id) {
+        products.remove(new Product(id));
+    }
+
+
 }

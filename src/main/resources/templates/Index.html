@@ -22,12 +22,19 @@
             <td th:text="${product.name}">NAVN</td>
             <td th:text="${product.price}">PRIS</td>
             <td th:text="${product.description}">BESKRIVELSE</td>
+            <td><a th:href="@{'/Delete/' + ${product.id}}">Delete</a></td>
+            <td><a th:href="@{'/Update/' + ${product.id}}">Update</a></td>
+
+
+
 
         </tr>
 
 </table>
 
 <a href="/Create">Tilføj nyt produkt til listen</a>
+
+
 
 </body>
 </html>

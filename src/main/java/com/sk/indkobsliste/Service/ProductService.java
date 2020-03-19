@@ -1,5 +1,6 @@
 package com.sk.indkobsliste.Service;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.sk.indkobsliste.Model.Product;
 import com.sk.indkobsliste.Repository.ProductRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,9 @@ public class ProductService {
     public void create(Product product){
 
         productRepo.create(product);
+    }
+    public void delete(Long id){
 
+        productRepo.delete(id);
     }
 }
