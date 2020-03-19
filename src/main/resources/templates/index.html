@@ -11,17 +11,17 @@
 
         <tr>
             <th>ID</th>
-            <th>Navn</th>
+            <th>NAVN</th>
             <th>PRIS</th>
             <th>BESKRIVELSE</th>
         </tr>
 
         <tr th:each="product:${productList}">
 
-            <td th:text="${product.id}"></td>
-            <td th:text="${product.name}"></td>
-            <td th:text="${product.price}"></td>
-            <td th:text="${product.description}"></td>
+            <td th:text="${product.id}">ID</td>
+            <td th:text="${product.name}">NAVN</td>
+            <td th:text="${product.price}">PRIS</td>
+            <td th:text="${product.description}">BESKRIVELSE</td>
 
         </tr>
 
